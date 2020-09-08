@@ -1,13 +1,17 @@
 # assignment 4:
 
 user_num = int(input("Please enter an integer. "))
-
-if user_num / 7 == 0:
-    print("Boom")
+check = False
+if user_num % 7 == 0:
+    check = True
 else:
     while user_num >= 1:
         if user_num % 10 == 7:
-            print("Boom")
+            check = True
             break
         user_num /= 10
-    print("You number is not dividable by 7 or contains the digit 7.")
+
+if check:
+    print("Boom")
+else:
+    print("Your number is not dividable by 7 or contains the digit 7.")
