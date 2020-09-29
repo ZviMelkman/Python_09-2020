@@ -1,15 +1,14 @@
 
 class Summer:
-    numbers = []
 
     def __init__(self, *numbers):
         self.numbers = numbers
 
-    def add(self, numbers):
-        sum = 0
+    def add(self, *numbers):
+        _sum = 0
         for i in self.numbers:
-            sum += self.numbers[i]
-        return sum
+            _sum += self.numbers[i]
+        return _sum
 
     def print_total(self):
         print(f'{self.add()}')
